@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 5249581909513180248}
   m_Layer: 0
   m_Name: Chibi
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -522,6 +522,7 @@ MonoBehaviour:
   _stackManager: {fileID: 11400000, guid: fcb954c097b9bb7479c10925a541a54b, type: 2}
   _characterAnim: {fileID: 5249581909513180228}
   _movementSpeed: 4
+  _rigidbody: {fileID: 5249581909513180249}
 --- !u!114 &5249581909513180228
 MonoBehaviour:
   m_ObjectHideFlags: 0

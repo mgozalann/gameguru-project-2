@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class StackPlacer : MonoBehaviour
 {
-    public event Action OnSpawnStack;
-    public event Action<bool> OnStackPerfect;
-
     [SerializeField] private StackManager _stackManager;
     [SerializeField] private float _tolerance;
 
@@ -22,7 +19,7 @@ public class StackPlacer : MonoBehaviour
         if(_stackManager.LastStack == null) return;
         if (_stackManager.CurrentStack == null )
         {
-            OnSpawnStack?.Invoke();
+            GameEvents.Instance.SpawnStack();
             return;
         }
         
@@ -41,7 +38,8 @@ public class StackPlacer : MonoBehaviour
         if (Mathf.Abs(xDif) <= _tolerance)
         {
             newXPos = lastTransform.position.x;
-            OnStackPerfect?.Invoke(true);
+            GameEvents.Instance.StackPerfect(true);
+
         }
         else if (Mathf.Abs(xDif) > _tolerance && Mathf.Abs(xDif) <= lastTransform.localScale.x)
         {
@@ -59,7 +57,6 @@ public class StackPlacer : MonoBehaviour
 
             _stackManager.CurrentStack.gameObject.SetActive(false);
             _stackManager.SetLastStack(null);
-
             return;
         }
 
@@ -69,22 +66,22 @@ public class StackPlacer : MonoBehaviour
 
         _stackManager.CurrentStack.transform.localScale = currentTransform.localScale;
         _stackManager.CurrentStack.transform.position = currentTransform.position;
-        
+
         _stackManager.SetLastStack(_stackManager.CurrentStack);
         
-        OnSpawnStack?.Invoke();
+        GameEvents.Instance.SpawnStack();
     }
 
     private void SpawnCutStack(float xPos, float xSize)
     {
         GameObject cutStack = Instantiate(_stackManager.CurrentStack.DropStack);
+        cutStack.GetComponent<MeshRenderer>().sharedMaterial = _stackManager.CurrentStack.MeshRenderer.material;
 
         cutStack.transform.position = new Vector3(xPos, cutStack.transform.position.y,
             _stackManager.CurrentStack.transform.position.z);
         cutStack.transform.localScale =
             new Vector3(xSize, cutStack.transform.localScale.y, cutStack.transform.localScale.z);
         
-        OnStackPerfect?.Invoke(false);
-
+        GameEvents.Instance.StackPerfect(false);
     }
 }

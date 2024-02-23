@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class StackSpawner : MonoBehaviour
 {
-    [SerializeField] private Stack[] _stacks;
+    [SerializeField] private Stack _stackPrefab;
+    [SerializeField] private Material[] _materials;
 
     [SerializeField] private Vector3 _spawnPos;
     [SerializeField] private float _offSet;
 
     [SerializeField] private StackManager _stackManager;
-    [SerializeField] private StackPlacer _stackPlacer;
 
     [SerializeField] private int _spawnCount; // bölümde kaç tane stack spawn edileceğini tutar.
 
@@ -19,19 +19,19 @@ public class StackSpawner : MonoBehaviour
 
     private void Start()
     {
-        _stackPlacer.OnSpawnStack += OnSpawn;
+        GameEvents.Instance.OnSpawnStack += OnSpawn;
     }
 
     private void OnSpawn()
     {
-        
         if (_stackCount >= _spawnCount)
         {
             _stackManager.SetLastStack(_stackManager.FinisherStack);
             return;
         }
         
-        Stack stack = Instantiate(_stacks[_counter]);
+        Stack stack = Instantiate(_stackPrefab);
+        stack.MeshRenderer.sharedMaterial = _materials[_counter];
         
         _stackManager.SetCurrentStack(stack);
         
@@ -45,7 +45,7 @@ public class StackSpawner : MonoBehaviour
         _counter++;
         _stackCount++;
         
-        if (_counter == _stacks.Length)
+        if (_counter == _materials.Length)
         {
             _counter = 0;
         }
@@ -55,6 +55,6 @@ public class StackSpawner : MonoBehaviour
 
     private void OnDisable()
     {
-        _stackPlacer.OnSpawnStack -= OnSpawn;
+        GameEvents.Instance.OnSpawnStack -= OnSpawn;
     }
 }

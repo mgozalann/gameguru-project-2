@@ -8,9 +8,12 @@ public class Stack : MonoBehaviour
     [SerializeField] private float _maxDistance;
     [SerializeField] private float _moveSpeed;
 
+    [SerializeField] private MeshRenderer _meshRenderer;
+    public MeshRenderer MeshRenderer => _meshRenderer;
+    
     [SerializeField] private GameObject _dropStack;
     public GameObject DropStack => _dropStack;
-    
+
     private float _distance;
     private float _length;
     
@@ -18,7 +21,7 @@ public class Stack : MonoBehaviour
     private bool _canMove;
     
     public bool MoveRight;
-
+    
     private void Start()
     {
         _canMove = true;
