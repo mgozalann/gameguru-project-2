@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5795274664889180242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5795274664889180240}
+  - component: {fileID: 5795274664889180241}
+  m_Layer: 0
+  m_Name: StackSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5795274664889180240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5795274664889180242}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5795274664889180241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5795274664889180242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dabda8e40ad4dd8a745a69e7b1bfe01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stacks:
+  - {fileID: 2032620139213562520, guid: 3c38d1181dc5b504e9de70b6e8a4ced8, type: 3}
+  - {fileID: 2032620139213562520, guid: b4ba0b245e9d9214d9d8e72b14a265e8, type: 3}
+  - {fileID: 2032620139213562520, guid: 9b5c5175a8d35f44f9a5619184864a5a, type: 3}
+  - {fileID: 2032620139213562520, guid: 366f946b1480a684aafd743b05ae4658, type: 3}
+  - {fileID: 2032620139213562520, guid: 4ae36844069f9c94c92d95f7b9fa6434, type: 3}
+  - {fileID: 2032620139213562520, guid: 54c72cf6dc1ac284ba49e2e54b851114, type: 3}
+  - {fileID: 2032620139213562520, guid: 7a36318dc6338994baf099ac0790f699, type: 3}
+  - {fileID: 2032620139213562520, guid: 8203dbc34bd6e5948a015a089ad18c49, type: 3}
+  - {fileID: 2032620139213562520, guid: 1c13217407f3768428e946c4a336e700, type: 3}
+  - {fileID: 2032620139213562520, guid: 4f058b8fcfcb45945b4e3196c427be3d, type: 3}
+  - {fileID: 2032620139213562520, guid: 4c2309dedf904e54b849c90612b74caf, type: 3}
+  - {fileID: 2032620139213562520, guid: abd922b809057ac488848621be16bb8c, type: 3}
+  - {fileID: 2032620139213562520, guid: 29b30d922d1dc0f4193e0fab6d8405c7, type: 3}
+  - {fileID: 2032620139213562520, guid: e16e1f867d14f5744a3c2f027b317d2a, type: 3}
+  - {fileID: 2032620139213562520, guid: 17baffa2e921bbc4188d8f48e7ed051f, type: 3}
+  - {fileID: 2032620139213562520, guid: 178b90aeca637f749b1d9601d9c1c822, type: 3}
+  - {fileID: 2032620139213562520, guid: 051f123d34777ec45857c7cf96ef9812, type: 3}
+  - {fileID: 2032620139213562520, guid: 83f8fb147963cc040b921ce863a55b79, type: 3}
+  - {fileID: 2032620139213562520, guid: a41da02d84cbc964bb87de8cb4aa95c7, type: 3}
+  _spawnPos: {x: 5, y: -0.5, z: 3}
+  _offSet: 3
+  _stackManager: {fileID: 11400000, guid: fcb954c097b9bb7479c10925a541a54b, type: 2}
+  _stackPlacer: {fileID: 0}
+  _gameManager: {fileID: 0}
+  _spawnCount: 19
