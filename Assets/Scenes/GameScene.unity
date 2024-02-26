@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: a234a8bfed0a0f0478b6a732b7901cbb, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -760,7 +760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &167945788
 Transform:
   m_ObjectHideFlags: 0
@@ -1180,7 +1180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &281664116
 Transform:
   m_ObjectHideFlags: 0
@@ -4800,6 +4800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399580258}
   - component: {fileID: 1399580257}
+  - component: {fileID: 1399580259}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -4884,6 +4885,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 68.972, y: -434.06, z: -307.974}
+--- !u!114 &1399580259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399580256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &1420732515
 GameObject:
   m_ObjectHideFlags: 0
@@ -5011,7 +5032,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5409243b667ba8243a0f0b768c1b028f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6022,7 +6043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1568459515
 Transform:
   m_ObjectHideFlags: 0
@@ -6453,7 +6474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1638961566
 Transform:
   m_ObjectHideFlags: 0
@@ -6958,6 +6979,11 @@ Transform:
   m_Father: {fileID: 995571690}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1776380524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 128324, guid: 4e110ae3c6c4a44438488f03e233bfe1, type: 3}
+  m_PrefabInstance: {fileID: 1878671402081732248}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1828326908
 GameObject:
   m_ObjectHideFlags: 0
@@ -8712,30 +8738,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5249581909513180249, guid: 1cb84d37fed0fa8429ced228ed0dda08, type: 3}
-      propertyPath: m_Drag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5249581909513180249, guid: 1cb84d37fed0fa8429ced228ed0dda08, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5249581909513180249, guid: 1cb84d37fed0fa8429ced228ed0dda08, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 5249581909513180249, guid: 1cb84d37fed0fa8429ced228ed0dda08, type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
-    - target: {fileID: 5249581909513180249, guid: 1cb84d37fed0fa8429ced228ed0dda08, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5249581909513180249, guid: 1cb84d37fed0fa8429ced228ed0dda08, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5249581909513180255, guid: 1cb84d37fed0fa8429ced228ed0dda08, type: 3}
       propertyPath: m_Name
       value: Chibi
@@ -8969,6 +8971,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 453706, guid: 4e110ae3c6c4a44438488f03e233bfe1, type: 3}
   m_PrefabInstance: {fileID: 1878671402081732248}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1878671402081732254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776380524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1001 &2614890102750246678
 PrefabInstance:
   m_ObjectHideFlags: 0

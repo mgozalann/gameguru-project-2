@@ -7,6 +7,7 @@ public class GameLoseCollision : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GameManager.Instance.GameLose();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

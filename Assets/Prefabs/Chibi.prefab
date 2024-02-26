@@ -522,7 +522,6 @@ MonoBehaviour:
   _stackManager: {fileID: 11400000, guid: fcb954c097b9bb7479c10925a541a54b, type: 2}
   _characterAnim: {fileID: 5249581909513180228}
   _movementSpeed: 4
-  _rigidbody: {fileID: 5249581909513180249}
 --- !u!114 &5249581909513180228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,7 +549,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &5249581909513180248
 BoxCollider:

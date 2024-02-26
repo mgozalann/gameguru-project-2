@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //public event Action OnGameLose;
+    public event Action OnGameLose;
     public event Action OnGameWin;
     
     public bool GameEnded = false;
@@ -29,6 +29,12 @@ public class GameManager : MonoBehaviour
     }
     public void GameWin()
     {
+        GameEnded = true;
         OnGameWin?.Invoke();
+    }
+    
+    public void GameLose()
+    {
+        OnGameLose?.Invoke();
     }
 }
